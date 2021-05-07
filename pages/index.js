@@ -6,8 +6,6 @@ import 'tailwindcss/tailwind.css'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
-  BookmarkAltIcon,
-  CalendarIcon,
   ChartPieIcon,
   PuzzleIcon,
   MenuIcon,
@@ -37,10 +35,7 @@ const partners = [
   },
   
 ]
-const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
-]
+
 const resources = [
   {
     name: 'Frontend',
@@ -67,6 +62,7 @@ const resources = [
    icon: ChipIcon,
   },
 ]
+
 const recentPosts = [
   { id: 1, name: 'Akamai Reversing Part I', href: '#' },
   { id: 2, name: 'Dissecting a VM', href: '#' },
@@ -90,7 +86,7 @@ export default function Home() {
                   <img
                     className="h-8 w-auto sm:h-10"
                     src="https://media.discordapp.net/attachments/795562442221944843/840219872760037376/unknown.png"
-                    alt=""
+                    alt="devmart"
                   />
                 </a>
               </div>
@@ -292,11 +288,11 @@ export default function Home() {
                 </div>
                 <div className="py-6 px-5 space-y-6">
                   <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                    <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a href="https://discord.gg/cHdZk3vZ5d" className="text-base font-medium text-gray-900 hover:text-gray-700">
                       Discord
                     </a>
 
-                    <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a href="/resources" className="text-base font-medium text-gray-900 hover:text-gray-700">
                       Resources
                     </a>
                     {resources.map((item) => (
@@ -324,7 +320,7 @@ export default function Home() {
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 Devmart is a developer collective that is dedicated to open source software and teaching others.
-                We push the envelope with our colaboration and are always looking for new projects to conquer.
+                We push the envelope with our collaboration and are always looking for new projects to conquer.
                 See for yourself!
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
