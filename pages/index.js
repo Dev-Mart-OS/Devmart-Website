@@ -323,29 +323,31 @@ export default function Home() {
                 <span className="block text-transparent bg-clip-text bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 xl:inline">Devmart</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Bruh moment I think I can probably remove this field because it looks like doodoo also
+                Devmart is a developer collective that is dedicated to open source software and teaching others.
+                We push the envelope with our colaboration and are always looking for new projects to conquer.
+                See for yourself!
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
                   <a
                     href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-900 hover:bg-blue-800 md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-grey-800 md:py-4 md:text-lg md:px-10"
                   >
-                    See Our Blog
+                    Read Our Blog
                   </a>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <a
                     href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md md:py-4 bg-blue-200 hover:bg-blue-300 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md md:py-4 bg-gray-200 hover:bg-gray-300 md:text-lg md:px-10"
                   >
-                    Github
+                    Check out our projects
                   </a>
                 </div>
               </div>
             </div>
           </main>
-    </div>
+    </div>    
   )
 }
 
