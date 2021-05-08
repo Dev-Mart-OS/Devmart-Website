@@ -64,11 +64,6 @@ const resources = [
     },
 ]
   
-const recentPosts = [
-    { id: 1, name: 'Akamai Reversing Part I', href: '#' },
-    { id: 2, name: 'Dissecting a VM', href: '#' },
-]
-  
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
