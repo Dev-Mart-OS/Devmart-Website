@@ -9,14 +9,21 @@ export default function PostLayout(props) {
   return (
     <DefaultLayout title={"DevMart"} description={"DevMart"} posts={props.posts}>
         <Head>
-            <title>{props.title}</title>
+          <title>{props.title} | {props.user}</title>
         </Head>
         <article>
-            <h1 className="text-3xl m-4 text-center font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:m-2 lg:m-6 lg:text-5xl">{props.title}</h1>
-            <div className="container rounded-xl p-5 mx-auto w-4/5 bg-gray-200">
+          <div className="container mx-auto p-5 w-4/5">
+            <div className="flex flex-auto items-center">
+              <h1 className="text-6xl text-left font-extrabold text-gray-900 sm:text-4xl sm:m-1 lg:m-2 lg:text-6xl">{props.title}</h1>
+              <div className="flex flex-auto flex-col">
+                <h1 className="text-sm text-left font-medium text-gray-400 sm:text-base lg:text-sm">{props.date}</h1>
+                <h1 className="text-base text-left font-medium text-gray-400 sm:text-2xl lg:text-base">{props.user}</h1>
+              </div>
+            </div>
+            <div className="container rounded p-5 w-full mx-auto bg-gray-100">
                 <div dangerouslySetInnerHTML={{__html:props.content}}/>
             </div>
-            <div><Link href='/'><a>Home</a></Link></div> 
+          </div>
         </article>
     </DefaultLayout>
   )

@@ -9,9 +9,12 @@ export async function getAllPosts() {
       const post = key.slice(2);
       const content = await import(`../_posts/${post}`);
       const meta = matter(content.default)
+      const abstract = marked(meta.content.split(" ").slice(0, 15).join(" "))
         posts.push({
             slug: post.replace('.md',''),
-            title: meta.data.title
+            title: meta.data.title,
+            cat: meta.data.cat,
+            abstract: abstract,
         });
     }
     return posts;
@@ -22,7 +25,10 @@ export async function getPostBySlug(slug) {
   const meta = matter(fileContent.default)
   const content = marked(meta.content)    
   return {
-    title: meta.data.title, 
+    title: meta.data.title,
+    user: meta.data.user,
+    date: meta.data.date,
+    cat: meta.data.cat,
     content: content
   }
 }

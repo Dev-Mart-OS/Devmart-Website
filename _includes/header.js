@@ -215,10 +215,12 @@ export default function Header(props) {
                                 </ul>
                               </div>
                               <div className="mt-5 text-sm">
-                                <a href="#" className="font-medium text-pink-600 hover:text-pink-500">
-                                  {' '}
-                                  View all posts <span aria-hidden="true">&rarr;</span>
-                                </a>
+                                <Link href="posts">
+                                  <a className="font-medium text-pink-600 hover:text-pink-500">
+                                    {' '}
+                                    View all posts <span aria-hidden="true">&rarr;</span>
+                                  </a>
+                                </Link>
                               </div>
                             </div>
                           </div>

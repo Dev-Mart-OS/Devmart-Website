@@ -6,42 +6,6 @@ import Link from 'next/link';
 import { getConfig, getAllPosts } from '@api'
 import DefaultLayout from '@layouts/default'
 
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import {
-    ChartPieIcon,
-    PuzzleIcon,
-    MenuIcon,
-    PhoneIcon,
-    PlayIcon,
-    ShieldCheckIcon,
-    XIcon,
-    DesktopComputerIcon,
-    DatabaseIcon,
-    ChipIcon,
-} from '@heroicons/react/outline'
-
-import { ChevronDownIcon } from '@heroicons/react/solid'
-
-const partners = [
-    {
-      name: 'Pill Software',
-      description: 'Fintech + retail automation for the future.',
-      href: '#',
-      icon: ChartPieIcon,
-    },
-    {
-      name: 'A Solutions',
-      description: 'Blazing fast and high scale anitbot solutions.',
-      href: '#',
-      icon: PuzzleIcon,
-    },   
-]
-
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
-
 export default function Home(props) {
   return (
     <DefaultLayout title={"DevMart"} description={"DevMart"} posts={props.posts}>
@@ -84,7 +48,7 @@ export default function Home(props) {
 
 export async function getStaticProps() {
   const config = await getConfig()
-  const allPosts = await getAllPosts()
+  const allPosts = await (await getAllPosts()).slice(0, 2)
   return {
     props: {
       posts: allPosts,
