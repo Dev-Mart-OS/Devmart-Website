@@ -41,25 +41,25 @@ const resources = [
     {
         name: 'Frontend',
         description: 'Explore the unique tools available to create your next flashy project.',
-        href: '#',
+        href: 'frontend',
         icon: DesktopComputerIcon,
     },
     {
         name: 'Reverse Engineering',
         description: 'Learn how to break other people\'s code. You know, just for fun.',
-        href: '#',
+        href: 'reverse-engineering',
         icon: ShieldCheckIcon,
     },
     {
         name: 'Backend',
         description: 'Understand the magic that runs the cloud 24/7.',
-        href: '#',
+        href: 'backend',
         icon: DatabaseIcon,
     },
     { 
         name: 'Embedded Programming',
         description: 'Get close to the metal and learn about how the computer really works.',
-        href: '#',
+        href: 'embedded-programming',
         icon: ChipIcon,
     },
 ]
@@ -184,17 +184,18 @@ export default function Header(props) {
                           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                             <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                               {resources.map((item) => (
-                                <a
-                                  key={item.name}
-                                  href={item.href}
-                                  className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                                >
-                                  <item.icon className="flex-shrink-0 h-6 w-6 text-pink-600" aria-hidden="true" />
-                                  <div className="ml-4">
-                                    <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                    <p className="mt-1 text-sm text-gray-500">{item.description}</p>
-                                  </div>
-                                </a>
+                                <Link href={item.href}>
+                                  <a
+                                    key={item.name}
+                                    className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                  >
+                                    <item.icon className="flex-shrink-0 h-6 w-6 text-pink-600" aria-hidden="true" />
+                                    <div className="ml-4">
+                                      <p className="text-base font-medium text-gray-900">{item.name}</p>
+                                      <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                    </div>
+                                  </a>
+                                </Link>
                               ))}
                             </div>
                             <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
