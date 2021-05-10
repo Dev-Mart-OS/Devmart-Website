@@ -41,25 +41,25 @@ const resources = [
     {
         name: 'Frontend',
         description: 'Explore the unique tools available to create your next flashy project.',
-        href: 'frontend',
+        href: '/frontend',
         icon: DesktopComputerIcon,
     },
     {
         name: 'Reverse Engineering',
         description: 'Learn how to break other people\'s code. You know, just for fun.',
-        href: 'reverse-engineering',
+        href: '/reverse-engineering',
         icon: ShieldCheckIcon,
     },
     {
         name: 'Backend',
         description: 'Understand the magic that runs the cloud 24/7.',
-        href: 'backend',
+        href: '/backend',
         icon: DatabaseIcon,
     },
     { 
         name: 'Embedded Programming',
         description: 'Get close to the metal and learn about how the computer really works.',
-        href: 'embedded-programming',
+        href: '/embedded-programming',
         icon: ChipIcon,
     },
 ]
@@ -83,7 +83,7 @@ export default function Header(props) {
                     src="https://media.discordapp.net/attachments/795562442221944843/840219872760037376/unknown.png"
                     alt="devmart"
                   /> */}
-                  <a className="block text-transparent bg-clip-text bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 xl:inline text-xl font-bold">Devmart</a>
+                  <a className="block text-transparent bg-clip-text bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 xl:inline text-xl lg:text-2xl font-bold">Devmart</a>
                 </Link>
               </div>
               <div className="-mr-2 -my-2 md:hidden">
