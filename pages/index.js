@@ -33,7 +33,7 @@ export default function Home(props) {
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3 rounded-md">
                   <a
-                    href="#"
+                    href="https://github.com/Dev-Mart-OS"
                     className="transition duration-200 ease-in-out w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md md:py-4 bg-gray-200 hover:bg-gray-300 md:text-lg md:px-10"
                   >
                     Check out our projects
