@@ -14,7 +14,7 @@ export default function PostLayout(props) {
         <article>
           <div className="container w-11/12 mx-auto p-5 lg:w-4/5 sm:w-11/12">
             <div className="flex flex-auto items-center justify-between">
-              <h1 className="text-xl text-left font-extrabold text-gray-900 sm:text-xl sm:m-1 lg:m-2 lg:text-6xl">{props.title}</h1>
+              <h1 className="text-xl text-left font-bold text-gray-900 sm:text-xl sm:m-1 lg:m-2 lg:text-4xl">{props.title}</h1>
               <div className="flex flex-auto flex-col">
                 <h1 className="text-sm text-right font-medium text-gray-400 sm:text-sm lg:text-base">{props.date}</h1>
                 <h1 className="text-sm text-right font-medium text-gray-400 sm:text-sm lg:text-base">{props.user}</h1>
