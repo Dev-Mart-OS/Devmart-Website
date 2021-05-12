@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css'
 import 'tailwindcss/tailwind.css'
 import Link from 'next/link';  
 import { getConfig, getAllPosts } from '@api'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
@@ -69,11 +71,16 @@ function classNames(...classes) {
 }
 
 export default function Header(props) {
+    const notify = () => toast("You thought it was that easy? Try using your final function key.");
     return (
-
     <Popover className="relative bg-white">
       {({ open }) => (
         <>
+          <ToastContainer
+          hideProgressBar={true}
+          position={"bottom-right"}
+          bodyClassName={() => "text-gray-500 p-2"}
+          />
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
               <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -230,9 +237,9 @@ export default function Header(props) {
                     </>
                   )}
                 </Popover>
-                <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                <btn onClick={notify} className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer">
                   Discord
-                </a>
+                </btn>
                 <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
                   Resources
                 </a>
